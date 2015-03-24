@@ -1,0 +1,44 @@
+V1.1
+====
+This game is to see how one can survive in a populated zone and what lonelyness can do to an individual.
+
+It goes thus.
+1. Around u,  if u are alone or there are less than 2 peoles inclusive around u,  u will die of lonelyness and maybe of starvation 
+   How do u find ur self alone. If there is no one or only a person around u the individual
+2. If u are too crowded, u will die still of suffocation and overcrowdiness. 
+   How does this affect u, if u there are more than 5 people inclusive around u,  then u will be forced to share the food u have
+   with then and what u will
+   have to eat will not even be able to satisfy u so u will die of starvation and suffocation.
+3. We start by making half of the population come alive. This half if gotten randomly. If this is not done, then any cell that comes alive has a probability of 1 to die immediately after comming to live.
+PROG:
+An individual is a cell in an infinitely large multidimensional array.
+The cells are going to occupy boolean values; 0 and 1.
+The presence of a 1 in a cell indicated that cell is alive while the presence of a 0 in a cell indicates that the cell is dead.
+
+From the start, all cells are dead but for some adams and eves that should start the linage. Lonelyness and suffocation does not affect then at the start of the game but will most certaily affect then as others are born.
+Randomly pick a cell,
+if(cell is alive ) (i)
+	Check how may living cells are around it
+		if( more than four cells surrounds it ) OR if(no cell surrounds it)
+			 then the cell dies
+		else
+			cell lives
+else -cell is dead
+	bring cell alive and test for (i)
+	
+	Do this unendingly
+	
+DATA STRUCTURES TO BE USED:
+A Multidimensional array which is going to be allocated memory as need be and reallocated the memory also as need be.
+An integer value that holds the state of a cell, dead or alive.
+
+After every testing, the structure of the array will be shown on the screen to see which cell is alive and which is dead and to also see how the population density influences the livelyhood of those cells.
+No hard feelings about the lives and deaths,  this is just a program to model that real world scenario.
+
+V1.2
+====
+	See that the cells that are the angles will have problems when computing the number of libing cells around. This is because, cells that donot are not in that array are going to be taken into consideration. Take for example, for and m x m matrix, trying to get the n X m+1 space is going out of the bounds of the array and in C, that will give u a very big positive value.		
+	Getting some problems with the status of the cells.
+
+BY FONGOH MARTIN, Beng student of UNIVERSITY OF BUEA, CAMEROON
+FREE AND WELCOMES MODIFICATION. email: fongohmartin@gmail.com
